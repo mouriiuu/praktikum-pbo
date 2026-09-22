@@ -1,0 +1,56 @@
+# PurrBook: Sistem Booking dan Kunjungan Cat Cafe
+
+Program ini dibuat menggunakan Python untuk latihan OOP. Program digunakan untuk mengelola data kucing, kunjungan pengunjung, dan kas kafe.
+
+## Struktur Class
+
+Program ini memiliki 3 class utama:
+
+### 1. Kucing
+
+Digunakan untuk mengelola data kucing seperti nama, ras, sifat, dan status kesehatan.
+
+* `cek_kondisi()` untuk melihat data kucing
+* `ganti_nama_cafe()` untuk mengganti nama kafe
+* `validasi_ras()` untuk mengecek ras kucing
+
+### 2. Kunjungan
+
+Digunakan untuk mencatat kunjungan pengunjung dan menghitung biaya bermain.
+
+* `buat_nota()` untuk menampilkan data kunjungan
+* `ubah_tarif()` untuk mengubah tarif
+* `validasi_durasi()` untuk mengecek durasi bermain
+
+### 3. CatCafe
+
+Digunakan untuk mengatur data kucing, kunjungan, dan kas kafe.
+
+* `daftarkan_kucing_baru()` untuk menambah kucing
+* `cek_kucing_tersedia()` untuk melihat kucing yang tersedia
+* `tampilkan_semua_kucing()` untuk melihat semua kucing
+* `update_status_kucing()` untuk mengubah status kucing
+* `hapus_kucing()` untuk menghapus kucing
+* `ubah_kapasitas()` untuk mengubah kapasitas kafe
+
+## Panduan Pengujian
+
+Saat menjalankan codingan akan memunculkan menu pilihan 1 sampai 7.
+
+1. **Menu 1 - Daftarkan kucing baru**
+   Masukkan nama, ras, dan sifat kucing. Coba gunakan ras yang tersedia seperti `Anggora`, lalu coba ras yang tidak tersedia untuk melihat validasi ras.
+2. **Menu 2 - Lihat kucing tersedia**
+   Setelah mendaftarkan kucing, pilih menu ini untuk melihat kucing dengan status `Sehat`.
+3. **Menu 3 - Buat kunjungan**
+   Pilih kucing yang tersedia dan masukkan durasi bermain. Coba durasi yang valid seperti 30 menit dan durasi di luar batas seperti 200 menit. Biaya kunjungan akan dihitung berdasarkan durasi bermain.
+4. **Menu 4 - Lihat kas cafe**
+   Setelah membuat kunjungan, pilih menu ini untuk melihat jumlah kas cafe. Kas akan bertambah sesuai biaya kunjungan.
+5. **Menu 5 - Update status kucing**
+   Pilih kucing yang sudah terdaftar, lalu ubah statusnya menjadi `Sehat`, `Sakit`, atau `Pemulihan`. Coba juga status lain seperti `Ngambek` untuk melihat validasinya.
+6. **Menu 6 - Hapus data kucing**
+   Pilih kucing yang ingin dihapus. Coba juga memasukkan nama kucing yang tidak terdaftar untuk melihat pesan `Kucing tidak ditemukan.`
+7. **Menu 7 - Keluar**
+   Pilih menu ini untuk mengakhiri program.
+
+Selain itu, coba masukkan pilihan menu selain 1-7 untuk memastikan program menampilkan pesan `Pilihan tidak valid.`
+Atribut private seperti `__status_kesehatan`, `__biaya`, dan `__kas_cafe` digunakan agar data tidak dapat diubah secara langsung dari luar class.

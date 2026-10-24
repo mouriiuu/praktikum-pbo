@@ -79,7 +79,7 @@ Konsep inheritance tetap dipakai: subclass memanggil `super().__init__()`, punya
 3. **Operator overloading**: `__str__` pada `Kucing` dan `__len__` pada `CatCafe` (dipakai lewat `len(self)`).
 4. **Tanpa anti-pattern**: tidak ada pengecekan `type()` atau rantai `if/elif` jenis. Pembuatan objek memakai dictionary `JENIS_KUCING` dan classmethod `dari_input()` milik tiap subclass.
 
-## Nilai Plus: SOLID
+## SOLID
 
 - **Single Responsibility Principle**: urusan uang dipisah ke `KasCafe`, `Kunjungan` hanya mengurus satu kunjungan, dan `CatCafe` fokus mengatur kucing serta pencatatan.
 - **Open/Closed Principle**: `CatCafe` dan `Kunjungan` hanya bergantung pada kontrak `Kucing`. Jenis kucing baru (misalnya `KucingSenior`) cukup dibuat sebagai subclass baru yang mengimplementasikan dua method abstract, lalu didaftarkan di `JENIS_KUCING`, tanpa mengubah `CatCafe` maupun `Kunjungan`.
